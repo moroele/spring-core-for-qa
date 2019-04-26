@@ -1,9 +1,13 @@
 package com.acme.banking.dbo.ooad;
 
-import java.util.Collection;
+import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Collection;
+@Service
 public class ReportingService {
+    @Autowired
     private XchangeService xchangeService;
+
     private AccountRepository accountRepository;
 
     public ReportingService(XchangeService xchangeService, AccountRepository accountRepository) {
